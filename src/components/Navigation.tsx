@@ -12,7 +12,7 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
             <Bird className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold text-primary">새들닷컴</span>
+            <span className="text-2xl font-bold text-primary">버드나무위키</span>
           </div>
           
           <nav className="hidden md:flex space-x-4">
