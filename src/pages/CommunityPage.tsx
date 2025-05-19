@@ -51,8 +51,8 @@ const CommunityPage: React.FC = () => {
     if (file) {
       // In a real app, upload the file to a server
       // For now, we'll use a mock URL from our existing birds
-      const mockImageUrl = 'https://images.pexels.com/photos/416179/pexels-photo-416179.jpeg';
-      setSelectedImage(mockImageUrl);
+      const localImageUrl = URL.createObjectURL(file); // ✅ 브라우저에서 이미지 URL 생성
+      setSelectedImage(localImageUrl);
     }
   };
 
