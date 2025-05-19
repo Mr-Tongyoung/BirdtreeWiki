@@ -64,7 +64,10 @@ const CommunityPage: React.FC = () => {
     <div className="flex h-[calc(100vh-4rem)] py-4">
       {/* Left Panel - User List */}
       <div className="hidden lg:block w-64 mr-4">
-        <UserList users={mockUsers} />
+        <UserList users={mockUsers.map(u => ({
+          ...u,
+          status: u.status as "online" | "away" | "offline"
+        }))} />
       </div>
 
       {/* Center Panel - Chat */}

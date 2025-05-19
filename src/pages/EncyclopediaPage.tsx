@@ -136,7 +136,7 @@ const EncyclopediaPage: React.FC = () => {
           {/* Empty state if no birds found */}
           {filteredBirds.length === 0 && (
             <div className="col-span-3 py-12 text-center">
-              <Lucide.CircleHelp className="h-12 w-12 text-gray-300 mx-auto mb-4" />
+              <Lucide.HelpCircle className="h-12 w-12 text-gray-300 mx-auto mb-4" />
               <h3 className="text-xl font-medium text-gray-600 mb-2">새를 찾을 수 없습니다</h3>
               <p className="text-gray-500">검색어를 변경하거나 AI 분류 기능을 사용해보세요.</p>
             </div>
