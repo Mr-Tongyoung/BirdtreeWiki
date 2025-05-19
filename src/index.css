@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #4CAF50;
+  --color-primary-light: #81C784;
+  --color-primary-dark: #388E3C;
+  --color-secondary: #03A9F4;
+  --color-secondary-light: #4FC3F7;
+  --color-secondary-dark: #0288D1;
+  --color-accent: #FFC107;
+  --color-success: #4CAF50;
+  --color-warning: #FF9800;
+  --color-error: #F44336;
+  --color-gray-light: #F5F5F5;
+  --color-gray: #9E9E9E;
+  --color-gray-dark: #616161;
+  --color-text: #333333;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: var(--color-text);
+}
+
+@layer components {
+  .message-bubble {
+    @apply rounded-2xl p-3 max-w-[70%] relative shadow-sm;
+  }
+  
+  .message-mine {
+    @apply bg-yellow-100 rounded-tr-none ml-auto;
+  }
+  
+  .message-other {
+    @apply bg-white rounded-tl-none;
+  }
+  
+  .bird-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .panel {
+    @apply bg-white rounded-lg shadow-md p-4;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-dark;
+  }
+  
+  .hotspot-btn {
+    @apply bg-primary-light text-white hover:bg-primary px-6 py-3 rounded-full font-medium shadow-md transition-all hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .nav-item {
+    @apply px-4 py-2 text-gray-600 hover:text-primary transition-colors;
+  }
+  
+  .nav-item-active {
+    @apply text-primary border-b-2 border-primary;
+  }
+  
+  .input-field {
+    @apply w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-light focus:border-transparent;
+  }
+}
